@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="nodeAdmin" class="no-js">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Node Admin</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.1.1/angular-material.css"/>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+
+</head>
+<body>
+  <div ng-include="'core/views/navigation.html'"></div>
+  <div ng-view></div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.6/angular.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.6/angular-route.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js"></script>
+  <script src="bower_components/dotize/src/dotize.js"></script> 
+  
+  <script src="app.js"></script>
+
+  <!-- Components -->
+  <script src="components/ui-bootstrap-tpls.min.js"></script>
+
+  <!-- Core -->
+  <script src="core/core.js"></script>
+  <script src="core/controllers/modalInstanceController.js"></script>
+
+  <!-- Dashboard -->
+  <script src="dashboard/dashboard.js"></script>
+  <script src="dashboard/dashboardConfig.js"></script>
+  <script src="dashboard/controllers/dashboardController.js"></script>
+
+  <!-- Model -->
+  <script src="model/model.js"></script>
+  <script src="model/modelConfig.js"></script>
+  <script src="model/controllers/modelController.js"></script>
+  <script src="model/controllers/newRecordController.js"></script>
+  <script src="model/controllers/editRecordController.js"></script>
+  <script src="model/services/modelServices.js"></script>
+
+  <!-- API -->
+  <script src="api/api.js"></script>
+  <script src="api/services/apiServices.js"></script>
+
+  <!-- UTILS -->
+  <script src="utils/lodash/lodash.js"></script>
+  <script src="utils/dotize/dotize.js"></script> 
+
+</body>
+</html>

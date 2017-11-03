@@ -1,0 +1,43 @@
+<div class="panel panel-default">
+
+  <button class="btn btn-default pull-right" ng-click="new()">
+      <span class="glyphicon glyphicon-plus"></span>
+    </button>
+
+  <div class="panel-heading">
+    <h3 class="panel-title">{{modelName}}</h3>
+  </div>
+
+  <div class="panel-body">
+    <div class="list-group" ng-if="rows.length == 0">
+        <div class="list-group-item"> Collection is empty. </div>
+    </div>
+
+  <table class="table" ng-if="rows.length > 0">
+    <thead>
+      <th ng-repeat="key in normalizedPaths" ng-if="key != '__v'"> {{key}} </th>
+      <th>  </th>
+    </thead>
+    <tbody>
+      <tr ng-repeat="row in rows">
+        <td ng-repeat="key in normalizedPaths" ng-if="key != '__v'"> 
+          <span ng-if="!isObject(row[key])">{{row[key]}}</span>
+          <span ng-if="isObject(row[key])" title="{{row[key]}}"> (...) </span>
+        </td>
+        <td> 
+          <button class="btn btn-default" ng-click="delete(row)">
+            <span class="glyphicon glyphicon-trash"></span>
+          </button>
+          <button class="btn btn-default" ng-click="edit(row)">
+            <span class="glyphicon glyphicon-pencil"></span>
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+  
+  
+</div>

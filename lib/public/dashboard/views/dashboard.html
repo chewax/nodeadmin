@@ -1,0 +1,21 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Dashboard</h3>
+  </div>
+
+  <div class="panel-body">
+    <div class="list-group">
+        <a href="#" class="list-group-item active">
+            Collections
+        </a>
+        
+        <a href="#!/model/{{model.name}}" class="list-group-item" ng-repeat="model in models">
+             <span class="badge">{{model.count}}</span> 
+            {{model.name}}
+        </a>
+        
+    </div>
+  </div>
+
+    
+</div>

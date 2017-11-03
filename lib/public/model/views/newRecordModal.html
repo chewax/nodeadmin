@@ -1,0 +1,15 @@
+<div class="modal-header">
+    <h3 class="modal-title" id="modal-title">New Record</h3>
+</div>
+<div class="modal-body" id="modal-body">
+     <div class="input-group" ng-repeat="field in modelSchema.paths" ng-if="(field.path != '__v') && (field.path != '_id')">
+        <span class="input-group-addon">{{field.path}}</span>
+        <input type="text" class="form-control" placeholder="{{field.path}}" aria-describedby="basic-addon1" ng-model="$ctrl.newRecord[field.path]" ng-if="field.instance == 'String' || field.instance == 'Number'">
+        <input type="text" class="form-control" uib-datepicker-popup="{{format}}" ng-model="$ctrl.newRecord[field.path]" is-open="$ctrl.newRecord[field.path].opened" datepicker-options="$ctrl.dateOptions" close-text="Close" alt-input-formats="$ctrl.altInputFormats" ng-if="field.instance == 'Date'"/>
+        <span class="input-group-addon" ng-if="field.instance == 'Date'" ng-click="$ctrl.openDateTime(field)"><i class="glyphicon glyphicon-calendar"></i></span> 
+    </div>
+</div>
+<div class="modal-footer">
+    <button class="btn btn-primary" type="button" ng-click="$ctrl.ok()">Save</button>
+    <button class="btn btn-warning" type="button" ng-click="$ctrl.cancel()">Cancel</button>
+</div>

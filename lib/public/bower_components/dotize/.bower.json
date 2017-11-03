@@ -1,0 +1,31 @@
+{
+  "name": "dotize",
+  "homepage": "https://github.com/vardars/dotize",
+  "description": "Convert complex js object to dot notation js object",
+  "main": "src/dotize.js",
+  "keywords": [
+    "dotize"
+  ],
+  "authors": [
+    "Suleyman Vardar <https://twitter.com/vardars>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "version": "0.2.0",
+  "_release": "0.2.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.2.0",
+    "commit": "7c223f7d7c440f8a751b9f0982438e7af838072b"
+  },
+  "_source": "https://github.com/vardars/dotize.git",
+  "_target": "^0.2.0",
+  "_originalSource": "dotize",
+  "_direct": true
+}
