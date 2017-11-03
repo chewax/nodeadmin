@@ -1,5 +1,5 @@
 {
-  "name": "NodeAdmin",
+  "name": "nodeadmin",
   "version": "1.0.0",
   "description": "NodeJS Admin",
   "main": "index.js",

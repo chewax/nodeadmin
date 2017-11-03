@@ -1,3 +1,3 @@
 'use strict'
 
-module.exports = require('./lib/main');;
+module.exports.init = require('./lib/main');;
