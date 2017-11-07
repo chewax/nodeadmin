@@ -1,9 +1,9 @@
 ### What is this? ###
 
 This is wants to become an admin dashboard for apps made with nodejs and mongodb using mongoose as a driver.
-Those are a lot of ifs, but it is a rather common setup.
+I know there are a lot of ifs, but it is a rather common setup.
 It is still in a very early alpha, but my intention is to create something similar to the django admin for nodejs.
-There is still a lot of work to do. In that sense there is a waffle.io document where you can check what remains to be done.
+There is still a lot of work to do. In that sense there is a [waffle.io](https://waffle.io/chewax/nodeadmin) document where you can check what remains to be done.
 
 ### Setup ###
 
@@ -31,5 +31,7 @@ db.once('open', function callback() {  _admin.init(Mongoose); });
 
 * **Access the admin**
 The admin will run under port 2100 on a localhost server.
+```
+http://localhost:2100/dashboard
+```
 
-    http://localhost:2100/dashboard
