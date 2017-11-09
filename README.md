@@ -1,23 +1,37 @@
 ### What is this? ###
 
-This is a skeleton for an API project in nodejs and mongodb.
+This is wants to become an admin dashboard for apps made with nodejs and mongodb using mongoose as a driver.
+I know there are a lot of ifs, but it is a rather common setup.
+It is still in a very early alpha, but my intention is to create something similar to the django admin for nodejs.
+There is still a lot of work to do. In that sense there is a [waffle.io](https://waffle.io/chewax/nodeadmin) document where you can check what remains to be done.
 
-## Setup ##
-* **Clone** the project
-* **Remove .gitignore** (to detach from current repository)
-* Rename the folder
-* **Customize DB secrets** in .env file. **Remember to add .env file to .gitignore if you upload to own repository**
-* **Install npm** dependencies.
+### Setup ###
+
+* **Install** as npm module.
+
+```
+npm install https://github.com/chewax/nodeadmin.git
+```
+*note: one of the tasks that remains to be done is to create and register an npm module*
+
+* **Configure** using the instance of mongoose 
 
 ```
 #!javascript
-npm install
+var _admin = require('nodeadmin');
+var Mongoose = require('mongoose');
+
+Mongoose.connect('mongodb://' + mongo_connection.url + '/' + mongo_connection.database, { useMongoClient: true });
+
+var db = Mongoose.connection;
+
+db.on('error', console.error.bind( console, 'connection error'));
+db.once('open', function callback() {  _admin.init(Mongoose); });
 ```
 
-* **Run.** (I recommend using an awesome tool called [nodemon](https://github.com/remy/nodemon) to auto reload server upon file changes)
-
-
+* **Access**
+The admin will run under port 2100 on a localhost server.
 ```
-#!javascript
-sudo nodemon -L
+http://localhost:2100/dashboard
 ```
+
